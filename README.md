@@ -1,3 +1,3 @@
-# cw-ip-011-optimal_trafic
+# Приложение для рекомендации оптимального тарифа на основе затрат
 cw-ip-011-optimal_trafic created by GitHub Classroom
-Приложение для рекомендации оптимального тарифа на основе затрат
+cw-ip-011-optimal_trafic
