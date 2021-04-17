@@ -12,6 +12,8 @@ namespace OptimalTrafic
 {
     public partial class Form2 : Form
     {
+        public Label labelfirst;
+
         public Form2()
         {
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace OptimalTrafic
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

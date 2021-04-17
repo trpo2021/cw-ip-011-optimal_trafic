@@ -8,3 +8,4 @@ C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\O
 C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.csproj.CoreCompileInputs.cache
 C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.exe
 C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.pdb
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.Form2.resources
