@@ -1,0 +1,10 @@
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\bin\Debug\OptimalTrafic.exe.config
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\bin\Debug\OptimalTrafic.exe
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\bin\Debug\OptimalTrafic.pdb
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.csprojAssemblyReference.cache
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.Form1.resources
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.Properties.Resources.resources
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.csproj.GenerateResource.cache
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.csproj.CoreCompileInputs.cache
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.exe
+C:\Users\Рома\source\repos\trpo2021\cw-ip-011-optimal_trafic\OptimalTrafic\OptimalTrafic\obj\Debug\OptimalTrafic.pdb
