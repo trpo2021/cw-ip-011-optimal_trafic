@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\OptimalTrafic",
+    "\\OptimalTrafic\\OptimalTrafic"
   ],
+  "SelectedNode": "\\OptimalTrafic\\OptimalTrafic.sln",
   "PreviewInSolutionExplorer": false
 }
