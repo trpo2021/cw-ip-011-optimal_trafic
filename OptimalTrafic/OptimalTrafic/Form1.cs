@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +13,22 @@ namespace OptimalTrafic
 {
     public partial class Form1 : Form
     {
+
+        public struct tarif
+        {
+            public string name;
+            public int minutes;
+            public int sms;
+            public int gigabytes;
+
+            public tarif(string _name,int _minutes, int _sms, int _gigabytes) : this()
+            {
+                this.name = _name;
+                this.minutes = _minutes;
+                this.sms = _sms;
+                this.gigabytes = _gigabytes;
+            }
+        }
 
         public Form1()
         {
@@ -26,11 +43,73 @@ namespace OptimalTrafic
         private void buttonSendSearchTarif_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            form2.label1.Text = this.textBoxGB.Text;
-            form2.label2.Text = this.textBoxSMS.Text;
-            form2.label3.Text = this.textBoxMinute.Text;
-            this.Hide();
-            form2.Show();
+            //List<tarif> tarifList = new List<tarif>();
+
+            //using (StreamReader sr = new StreamReader(@"Tarifs.txt"))
+            //{
+
+            //    while (!sr.EndOfStream)
+            //    {
+            //        tarif tarif;
+
+            //        tarif.minutes = Convert.ToInt32(sr.ReadLine());
+            //        tarif.sms = Convert.ToInt32(sr.ReadLine());
+            //        tarif.gigabytes = Convert.ToInt32(sr.ReadLine());
+
+            //        tarifList.Add(tarif);
+            //    }
+
+            //    tarif[] tarifArray = tarifList.ToArray();
+
+            //}
+            //textBoxGB.Text = Convert.ToString(tarifList[0].gigabytes);
+            String tarifOperator = Convert.ToString(comboBoxOperator.Text);
+            String tarifOperatorFile="";
+            switch (tarifOperator)
+            {
+                case "МТС":
+                    tarifOperatorFile = "TarifsMTS.txt";
+                    break;
+                case "Мегафон":
+                    tarifOperatorFile = "TarifsMegafon.txt";
+                    break;
+                case "Билайн":
+                    tarifOperatorFile = "TarifsBilain.txt";
+                    break;
+            }
+            List<tarif> tarifs = new List<tarif>();
+            string[] s = File.ReadAllLines(tarifOperatorFile);
+            for (int i = 0; i < s.Length; i++)
+            {
+                string[] rbtarif = s[i].Split(new char[] { ' ' });
+                tarifs.Add(new tarif(Convert.ToString(rbtarif[0]),Convert.ToInt32(rbtarif[1]), Convert.ToInt32(rbtarif[2]), Convert.ToInt32(rbtarif[3])));
+            }
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                textBoxGB.Text = Convert.ToString(tarifs[0].name);
+            }
+
+            //form2.label1.Text = Convert.ToString(tarifs);
+            //form2.label2.Text = Convert.ToString(tarifs[1]);
+            //form2.label3.Text = Convert.ToString(tarifs[2]);
+
+            //List<String> slova = new List<string>();
+            //using (StreamReader sr = new StreamReader("MTSMax.txt"))
+            //{
+            //    while (!sr.EndOfStream)
+            //       slova.Add(sr.ReadLine());
+            //}
+            //string[] name = slova[0].Split(' ');
+            //string[] value = slova[1].Split(' ');
+            //var reader = new StreamReader("MTSMax.txt");   
+            //form2.label1.Text = reader.ReadLine();
+            //form2.label2.Text = reader.ReadLine();
+            //form2.label3.Text = reader.ReadLine();
+            //reader.Close();
+
+            //this.Hide();
+            //form2.Show();
         }
 
     }
