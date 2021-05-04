@@ -40,6 +40,11 @@ namespace OptimalTrafic
            
         }
 
+        int RequiredIndicators;
+        int StrokNumber;
+        int StrokSum;
+        int Difference;
+
         private void buttonSendSearchTarif_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
@@ -77,19 +82,29 @@ namespace OptimalTrafic
                     tarifOperatorFile = "TarifsBilain.txt";
                     break;
             }
+
+            RequiredIndicators = Convert.ToInt32(textBoxGB.Text) + Convert.ToInt32(textBoxMinute.Text) + Convert.ToInt32(textBoxSMS.Text);
+
             List<tarif> tarifs = new List<tarif>();
             string[] s = File.ReadAllLines(tarifOperatorFile);
             for (int i = 0; i < s.Length; i++)
             {
                 string[] rbtarif = s[i].Split(new char[] { ' ' });
                 tarifs.Add(new tarif(Convert.ToString(rbtarif[0]),Convert.ToInt32(rbtarif[1]), Convert.ToInt32(rbtarif[2]), Convert.ToInt32(rbtarif[3])));
+                StrokSum = Convert.ToInt32(rbtarif[1]) + Convert.ToInt32(rbtarif[2]) + Convert.ToInt32(rbtarif[3]);
+                if (i == 0) Difference = Math.Abs(RequiredIndicators - StrokSum);
+                if (Difference > Math.Abs(RequiredIndicators - StrokSum))
+                {
+                    Difference = Math.Abs(RequiredIndicators - StrokSum);
+                    StrokNumber = i;
+                }
             }
 
             for (int i = 0; i < s.Length; i++)
             {
-                textBoxGB.Text = Convert.ToString(tarifs[0].name);
+                textBoxGB.Text = Convert.ToString(tarifs[StrokNumber].name);
             }
-
+            
             //form2.label1.Text = Convert.ToString(tarifs);
             //form2.label2.Text = Convert.ToString(tarifs[1]);
             //form2.label3.Text = Convert.ToString(tarifs[2]);
