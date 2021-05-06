@@ -29,6 +29,7 @@ namespace OptimalTrafic
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonSendSearchTarif = new System.Windows.Forms.Button();
             this.textBoxGB = new System.Windows.Forms.TextBox();
             this.textBoxMinute = new System.Windows.Forms.TextBox();
@@ -38,6 +39,14 @@ namespace OptimalTrafic
             this.labelSMS = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxOperator = new System.Windows.Forms.ComboBox();
+            this.erpTextBoxGB = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpTextBoxMinute = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpTextBoxSMS = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpButtonSendSearchTarif = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.erpTextBoxGB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTextBoxMinute)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTextBoxSMS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpButtonSendSearchTarif)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSendSearchTarif
@@ -53,23 +62,35 @@ namespace OptimalTrafic
             // textBoxGB
             // 
             this.textBoxGB.Location = new System.Drawing.Point(349, 80);
+            this.textBoxGB.MaxLength = 4;
             this.textBoxGB.Name = "textBoxGB";
             this.textBoxGB.Size = new System.Drawing.Size(100, 20);
             this.textBoxGB.TabIndex = 1;
+            this.textBoxGB.Click += new System.EventHandler(this.textBoxGB_Click);
+            this.textBoxGB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGB_KeyPress);
+            this.textBoxGB.Leave += new System.EventHandler(this.textBoxGB_Leave);
             // 
             // textBoxMinute
             // 
             this.textBoxMinute.Location = new System.Drawing.Point(349, 137);
+            this.textBoxMinute.MaxLength = 4;
             this.textBoxMinute.Name = "textBoxMinute";
             this.textBoxMinute.Size = new System.Drawing.Size(100, 20);
             this.textBoxMinute.TabIndex = 2;
+            this.textBoxMinute.Click += new System.EventHandler(this.textBoxMinute_Click);
+            this.textBoxMinute.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMinute_KeyPress);
+            this.textBoxMinute.Leave += new System.EventHandler(this.textBoxMinute_Leave);
             // 
             // textBoxSMS
             // 
             this.textBoxSMS.Location = new System.Drawing.Point(349, 193);
+            this.textBoxSMS.MaxLength = 4;
             this.textBoxSMS.Name = "textBoxSMS";
             this.textBoxSMS.Size = new System.Drawing.Size(100, 20);
             this.textBoxSMS.TabIndex = 3;
+            this.textBoxSMS.Click += new System.EventHandler(this.textBoxSMS_Click);
+            this.textBoxSMS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSMS_KeyPress);
+            this.textBoxSMS.Leave += new System.EventHandler(this.textBoxSMS_Leave);
             // 
             // labelGB
             // 
@@ -119,6 +140,22 @@ namespace OptimalTrafic
             this.comboBoxOperator.Size = new System.Drawing.Size(100, 21);
             this.comboBoxOperator.TabIndex = 8;
             // 
+            // erpTextBoxGB
+            // 
+            this.erpTextBoxGB.ContainerControl = this;
+            // 
+            // erpTextBoxMinute
+            // 
+            this.erpTextBoxMinute.ContainerControl = this;
+            // 
+            // erpTextBoxSMS
+            // 
+            this.erpTextBoxSMS.ContainerControl = this;
+            // 
+            // erpButtonSendSearchTarif
+            // 
+            this.erpButtonSendSearchTarif.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +173,10 @@ namespace OptimalTrafic
             this.Name = "Form1";
             this.Text = "Тариф мечты";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.erpTextBoxGB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTextBoxMinute)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTextBoxSMS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpButtonSendSearchTarif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,6 +193,10 @@ namespace OptimalTrafic
         private System.Windows.Forms.Label labelSMS;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxOperator;
+        private System.Windows.Forms.ErrorProvider erpTextBoxGB;
+        private System.Windows.Forms.ErrorProvider erpTextBoxMinute;
+        private System.Windows.Forms.ErrorProvider erpTextBoxSMS;
+        private System.Windows.Forms.ErrorProvider erpButtonSendSearchTarif;
     }
 }
 
