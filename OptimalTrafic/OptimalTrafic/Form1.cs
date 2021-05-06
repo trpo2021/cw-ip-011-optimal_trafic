@@ -105,26 +105,28 @@ namespace OptimalTrafic
                 textBoxGB.Text = Convert.ToString(tarifs[StrokNumber].name);
             }
             
-            //form2.label1.Text = Convert.ToString(tarifs);
-            //form2.label2.Text = Convert.ToString(tarifs[1]);
-            //form2.label3.Text = Convert.ToString(tarifs[2]);
 
-            //List<String> slova = new List<string>();
-            //using (StreamReader sr = new StreamReader("MTSMax.txt"))
-            //{
-            //    while (!sr.EndOfStream)
-            //       slova.Add(sr.ReadLine());
-            //}
-            //string[] name = slova[0].Split(' ');
-            //string[] value = slova[1].Split(' ');
-            //var reader = new StreamReader("MTSMax.txt");   
-            //form2.label1.Text = reader.ReadLine();
-            //form2.label2.Text = reader.ReadLine();
-            //form2.label3.Text = reader.ReadLine();
-            //reader.Close();
+            form2.label1.Text = Convert.ToString(tarifs[StrokNumber].name);
+            form2.label2.Text = Convert.ToString(tarifs[StrokNumber].minutes);
+            form2.label3.Text = Convert.ToString(tarifs[StrokNumber].sms);
+            form2.label4.Text = Convert.ToString(tarifs[StrokNumber].gigabytes);
 
-            //this.Hide();
-            //form2.Show();
+            List<String> slova = new List<string>();
+            /*using (StreamReader sr = new StreamReader("MTSMax.txt"))
+            {
+                while (!sr.EndOfStream)
+                   slova.Add(sr.ReadLine());
+            }
+            string[] name = slova[0].Split(' ');
+            string[] value = slova[1].Split(' ');
+            var reader = new StreamReader("MTSMax.txt");  
+            form2.label1.Text = reader.ReadLine();
+            form2.label2.Text = reader.ReadLine();
+            form2.label3.Text = reader.ReadLine();
+            reader.Close();
+            */
+            this.Hide();
+            form2.Show();
         }
 
     }
