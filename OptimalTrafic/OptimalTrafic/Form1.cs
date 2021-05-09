@@ -22,7 +22,7 @@ namespace OptimalTrafic
             public int sms;
             public int gigabytes;
 
-            public tarif(string _name,int _minutes, int _sms, int _gigabytes) : this()
+            public tarif(string _name, int _minutes, int _sms, int _gigabytes) : this()
             {
                 this.name = _name;
                 this.minutes = _minutes;
@@ -40,7 +40,7 @@ namespace OptimalTrafic
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         int RequiredIndicators;
@@ -51,16 +51,16 @@ namespace OptimalTrafic
         private void buttonSendSearchTarif_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            if (string.IsNullOrEmpty(textBoxGB.Text) || string.IsNullOrWhiteSpace(textBoxGB.Text) || 
+            if (string.IsNullOrEmpty(textBoxGB.Text) || string.IsNullOrWhiteSpace(textBoxGB.Text) ||
                 string.IsNullOrEmpty(textBoxSMS.Text) || string.IsNullOrWhiteSpace(textBoxSMS.Text) ||
                 string.IsNullOrEmpty(textBoxMinute.Text) || string.IsNullOrWhiteSpace(textBoxMinute.Text))
             {
-                erpButtonSendSearchTarif.SetError(buttonSendSearchTarif, "Заполните поля"); 
+                erpButtonSendSearchTarif.SetError(buttonSendSearchTarif, "Заполните поля");
             }
             else
             {
                 erpButtonSendSearchTarif.Clear();
-               String tarifOperator = Convert.ToString(comboBoxOperator.Text);
+                String tarifOperator = Convert.ToString(comboBoxOperator.Text);
                 String tarifOperatorFile = "";
                 switch (tarifOperator)
                 {
@@ -103,7 +103,7 @@ namespace OptimalTrafic
                 form2.label3.Text = Convert.ToString(tarifs[StrokNumber].sms);
                 form2.label4.Text = Convert.ToString(tarifs[StrokNumber].gigabytes);
 
-                List<String> slova = new List<string>();                
+                List<String> slova = new List<string>();
                 this.Hide();
                 form2.Show();
             }
@@ -198,7 +198,7 @@ namespace OptimalTrafic
         private void textBoxSMS_Click(object sender, EventArgs e)
         {
             textBoxSMS.Clear();
-        }   
+        }
     }
-    
+
 }
