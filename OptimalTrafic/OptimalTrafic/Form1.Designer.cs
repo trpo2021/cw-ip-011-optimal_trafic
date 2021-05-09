@@ -130,6 +130,7 @@ namespace OptimalTrafic
             // 
             // comboBoxOperator
             // 
+            this.comboBoxOperator.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOperator.FormattingEnabled = true;
             this.comboBoxOperator.Items.AddRange(new object[] {
             "МТС",
