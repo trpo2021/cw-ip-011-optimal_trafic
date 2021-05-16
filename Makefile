@@ -5,38 +5,40 @@ TEST_NAME = chessviz-test
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I src -I thirdparty -MP -MMD
-LDFLAGS =
-LDLIBS =
 
 VS_DIR = .vs
 v16_DIR = v16 
-BIN_DIR = bin
-OBJ_DIR = obj
-SRC_DIR = src
-TEST_DIR = test
-THIRD_DIR = thirdparty
 
-APP_PATH = $(BIN_DIR)/$(APP_NAME)
-LIB_PATH = $(OBJ_DIR)/$(SRC_DIR)/$(LIB_NAME)/$(LIB_NAME).a
-TEST_PATH = $(BIN_DIR)/$(TEST_NAME)
-CTEST_PATH = $(THIRD_DIR)/ctest.h
+	#change this to the name of the Main class file, without file extension
+MAIN_FILE = $(LIB_NAME)/$(VS_DIR)/$(LIB_NAME)/$(v16_DIR)
 
-SUO_FILES=$(LIB_NAME)/$(VS_DIR)/$(LIB_NAME)/$(v16)
+#change this to the depth of the project folders
+#if needed, add a prefix for a common project folder
+CSHARP_SOURCE_FILES = $(wildcard */*/*.cs */*.cs *.cs)
 
-SRC_EXT = c
+#add needed flags to the compilerCSHARP_FLAGS = -out:$(EXECUTABLE)
+CSHARP_FLAGS = -out:$(EXECUTABLE)
 
-APP_SOURCES = $(shell find $(SRC_DIR)/$(APP_NAME) -name '*.$(SRC_EXT)')
-APP_OBJECTS = $(APP_SOURCES:$(SRC_DIR)/%.$(SRC_EXT)=$(OBJ_DIR)/$(SRC_DIR)/%.o)
+#change to the environment compiler
+CSHARP_COMPILER = mcs
 
-LIB_SOURCES = $(shell find $(SRC_DIR)/$(LIB_NAME) -name '*.$(SRC_EXT)')
-LIB_OBJECTS = $(LIB_SOURCES:$(SRC_DIR)/%.$(SRC_EXT)=$(OBJ_DIR)/$(SRC_DIR)/%.o)
+#if needed, change the executable file
+EXECUTABLE = $(MAIN_FILE).suo
 
-TEST_SOURCES = $(shell find $(TEST_DIR) -name '*.$(SRC_EXT)')
-TEST_OBJECTS = $(TEST_SOURCES:$(TEST_DIR)/%.$(SRC_EXT)=$(OBJ_DIR)/$(TEST_DIR)/%.o)
+#if needed, change the remove command according to your system
+RM_CMD = -rm -f $(EXECUTABLE)
+all: $(EXECUTABLE)
 
-DEPS = $(APP_OBJECTS:.o=.d) $(LIB_OBJECTS:.o=.d) $(TEST_OBJECTS:.o=.d)
+$(EXECUTABLE): $(CSHARP_SOURCE_FILES)
+    @ $(CSHARP_COMPILER) $(CSHARP_SOURCE_FILES) $(CSHARP_FLAGS)
+    @ echo compiling...
 
-.PHONY: clean
+run: all
+    ./$(EXECUTABLE)
+
 clean:
-	$(RM) $(LIB_NAME) 
-	find $(SUO_FILES) -name '*.suo' -exec $(RM) '{}' \;
+    @ $(RM_CMD)
+
+remake:
+    @ $(MAKE) clean
+    @ $(MAKE)
