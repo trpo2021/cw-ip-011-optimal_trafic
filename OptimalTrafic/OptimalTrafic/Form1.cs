@@ -144,6 +144,7 @@ namespace OptimalTrafic
 
         private void textBoxSMS_Leave(object sender, EventArgs e)
         {
+
             string pattern = "^([0-9])";
             if (Regex.IsMatch(textBoxSMS.Text, pattern))
             {
