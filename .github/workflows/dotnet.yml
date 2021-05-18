@@ -28,7 +28,7 @@ jobs:
     #  run: dotnet test --no-build --verbosity normal
 
     - name: Build with dotnet
-      run: dotnet build ./OptimalTrafic.sln --configuration Release
+      run: dotnet build ./OptimalTrafic/OptimalTrafic.sln --configuration Release
     
     - name: Test with dotnet
-      run: dotnet test ./OptimalTrafic.sln --configuration Release
+      run: dotnet test ./OptimalTrafic/OptimalTrafic.sln --configuration Release
