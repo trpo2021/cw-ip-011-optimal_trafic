@@ -4,7 +4,7 @@
   <description asmv2:publisher="OptimalTrafic" asmv2:product="OptimalTrafic" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="OptimalTrafic.exe.manifest" size="5227">
@@ -14,7 +14,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3Re9c70HmXWH+pc+dIiA+CHDafnIap5nb2kkCqh66Ic=</dsig:DigestValue>
+        <dsig:DigestValue>neuAMBUu2Y7SGdaJqTrC0XLyQearESb6uMbd/gOTSMw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

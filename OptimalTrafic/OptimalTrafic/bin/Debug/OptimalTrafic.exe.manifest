@@ -49,17 +49,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QybtJRX4ntXRXjxnKzmWIq/dztzGWG6tJ73u7c4JVKk=</dsig:DigestValue>
+        <dsig:DigestValue>h63KjwjyX76JHu8y6REHcWryAh5kQs2JC806nWruZkM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="OptimalTrafic.exe.config" size="189">
+  <file name="OptimalTrafic.exe.config" size="184">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+      <dsig:DigestValue>FihlZtVNgcNyH37Pf0Jtll3jZOm+L55ijXNjtoS2/mo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Tarifs.txt" size="7">
