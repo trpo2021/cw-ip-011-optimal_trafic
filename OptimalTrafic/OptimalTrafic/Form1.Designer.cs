@@ -124,7 +124,7 @@ namespace OptimalTrafic
             // 
             // textBoxGB
             // 
-            this.textBoxGB.Location = new System.Drawing.Point(402, 125);
+            this.textBoxGB.Location = new System.Drawing.Point(402, 128);
             this.textBoxGB.Name = "textBoxGB";
             this.textBoxGB.Size = new System.Drawing.Size(100, 23);
             this.textBoxGB.TabIndex = 16;
