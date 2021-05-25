@@ -186,14 +186,14 @@ namespace OptimalTrafic
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBoxOperator;
-        private System.Windows.Forms.TextBox textBoxSMS;
-        private System.Windows.Forms.TextBox textBoxMinute;
+        public System.Windows.Forms.ComboBox comboBoxOperator;
+        public System.Windows.Forms.TextBox textBoxSMS;
+        public System.Windows.Forms.TextBox textBoxMinute;
         private System.Windows.Forms.Label Operator;
         private System.Windows.Forms.Label labelSMS;
         private System.Windows.Forms.Label labelMinute;
         private System.Windows.Forms.Label labelGB;
-        private System.Windows.Forms.TextBox textBoxGB;
+        public System.Windows.Forms.TextBox textBoxGB;
         private System.Windows.Forms.Button buttonSendSearchTarif;
         private System.Windows.Forms.ErrorProvider erpTextBoxGB;
         private System.Windows.Forms.ErrorProvider erpTextBoxMinute;
