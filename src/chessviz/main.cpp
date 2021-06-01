@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Rus"); // Подключение русского языка
+    setlocale(LC_ALL, "Rus"); 
     int Gig;
     int SMS;
     int Minut;
@@ -46,7 +46,7 @@ int main()
             tarifOperatorFile = "TarifsBilain.txt";
             break;
         }
-    } while (Operator != 1 || Operator != 2 || Operator != 3);
+    } while (Operator == 1 || Operator == 2 || Operator == 3);
 
     do {
         cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего "
@@ -61,7 +61,7 @@ int main()
             SposobPodbor = 2;
             break;
         }
-    } while (SposobPodbor != 1 || SposobPodbor != 2);
+    } while (SposobPodbor == 1 || SposobPodbor == 2);
 
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
