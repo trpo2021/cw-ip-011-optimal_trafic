@@ -2,11 +2,41 @@
 #include <ctest.h>
 #include <fstream>
 #include <iostream>
-#include <libchessviz/CheckTarif.h>
+#include <libchessviz/CheckTarif1.h>
 #include <libchessviz/InputBilain.h>
+#include <libchessviz/InputMegafon.h>
+#include <libchessviz/Input.h>
 #include <libchessviz/struc.h>
 #include <list>
 using namespace std;
+
+CTEST(test1, Output_test_MTS)
+{
+    int StrokNumber;
+    int N = 4;
+    string tarifOperatorFile = "TarifsMTS.txt";
+    int RequiredIndicators = 777;
+    tarifs* tarif = Input(N, tarifOperatorFile);
+    StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
+    cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
+         << "\t" << tarif[StrokNumber].sms << "\t"
+         << tarif[StrokNumber].gigabytes << endl;
+    ASSERT_EQUAL(1, StrokNumber);
+}
+
+CTEST(test2, Output_test_Megafon)
+{
+    int StrokNumber;
+    int N = 4;
+    string tarifOperatorFile = "TarifsMegafon.txt";
+    int RequiredIndicators = 900;
+    tarifs* tarif = InputMegafon(N, tarifOperatorFile);
+    StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
+    cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
+         << "\t" << tarif[StrokNumber].sms << "\t"
+         << tarif[StrokNumber].gigabytes << endl;
+    ASSERT_EQUAL(2, StrokNumber);
+}
 
 CTEST(test3, Output_test_Bilain)
 {
@@ -15,9 +45,12 @@ CTEST(test3, Output_test_Bilain)
     string tarifOperatorFile = "TarifsBilain.txt";
     int RequiredIndicators = 2000;
     tarifs* tarif = InputBilain(N, tarifOperatorFile);
-    StrokNumber = CheckTarif(tarif, N, RequiredIndicators);
+    StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
     cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
          << "\t" << tarif[StrokNumber].sms << "\t"
          << tarif[StrokNumber].gigabytes << endl;
     ASSERT_EQUAL(3, StrokNumber);
 }
+
+
+

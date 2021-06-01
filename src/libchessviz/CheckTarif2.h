@@ -2,4 +2,4 @@
 #include <iostream>
 #include <libchessviz/struc.h>
 using namespace std;
-int CheckTarif(tarifs* tarif, int N, int RequiredIndicators);
+int CheckTarif2(tarifs* tarif, int N, int RequiredIndicators);

@@ -5,7 +5,7 @@
 #include <list>
 using namespace std;
 
-int CheckTarif(tarifs* tarif, int N, int RequiredIndicators)
+int CheckTarif1(tarifs* tarif, int N, int RequiredIndicators)
 {
     int Difference, StrokSum, StrokNumber;
     for (int i = 0; i < N; i++) {

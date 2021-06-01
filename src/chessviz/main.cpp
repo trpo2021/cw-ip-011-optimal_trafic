@@ -1,7 +1,7 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
-#include <libchessviz/CheckTarif.h>
+#include <libchessviz/CheckTarif1.h>
 #include <libchessviz/GetValue.h>
 #include <libchessviz/Input.h>
 #include <libchessviz/Output.h>
@@ -20,6 +20,8 @@ int main()
     int N;
     int RequiredIndicators;
     int StrokNumber;
+    int Podbor;
+    int SposobPodbor;
     string tarifOperatorFile;
 
     cout << "Введите кол-во минут:\n";
@@ -44,9 +46,20 @@ int main()
         tarifOperatorFile = "TarifsBilain.txt";
         break;
     }
+    cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего тарифа(возможна нехватка заданных данных) 2.Подбор тарифа, полностью удовлетворяющего заданным условиям\n";
+    cin >> Podbor;
+    switch (Podbor) {
+    case 1:
+        SposobPodbor = 1;
+        break;
+    case 2:
+        SposobPodbor = 2;
+        break;
+    }
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
     RequiredIndicators = Gig + SMS + Minut;
-    StrokNumber = CheckTarif(tarif, N, RequiredIndicators);
+    if(SposobPodbor=1) StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
+    if(SposobPodbor=2) StrokNumber = CheckTarif2(tarif, N, RequiredIndicators);
     Output(tarif, StrokNumber);
 }
