@@ -61,9 +61,9 @@ int main()
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
     RequiredIndicators = Gig + SMS + Minut;
-    if (SposobPodbor = 1)
+    if (SposobPodbor == 1)
         StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
-    if (SposobPodbor = 2)
+    if (SposobPodbor == 2)
         StrokNumber = CheckTarif2(tarif, N, RequiredIndicators);
     Output(tarif, StrokNumber);
 }
