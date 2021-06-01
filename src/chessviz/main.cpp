@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <libchessviz/CheckTarif1.h>
+#include <libchessviz/CheckTarif2.h>
 #include <libchessviz/GetValue.h>
 #include <libchessviz/Input.h>
 #include <libchessviz/Output.h>
