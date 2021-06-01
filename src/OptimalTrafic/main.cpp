@@ -1,0 +1,76 @@
+#include <LibOptimalTrafic/CheckTarif1.h>
+#include <LibOptimalTrafic/CheckTarif2.h>
+#include <LibOptimalTrafic/GetValue.h>
+#include <LibOptimalTrafic/Input.h>
+#include <LibOptimalTrafic/Output.h>
+#include <LibOptimalTrafic/struc.h>
+#include <cmath>
+#include <fstream>
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    int Gig;
+    int SMS;
+    int Minut;
+    int Operator = 0;
+    int N;
+    int RequiredIndicators;
+    int StrokNumber;
+    int Podbor = 0;
+    int SposobPodbor;
+    string tarifOperatorFile;
+
+    cout << "Введите кол-во минут:\n";
+    Minut = GetValue();
+    cout << "Введите кол-во смс:\n";
+    SMS = GetValue();
+    cout << "Введите кол-во гиг:\n";
+    Gig = GetValue();
+
+    while (Operator < 1 || Operator > 3) {
+        cout << "Введите название необходимого оператора: 1.МТС 2.Мегафон "
+                "3.Билайн \n";
+        Operator = GetValue();
+    }
+
+    switch (Operator) {
+    case 1:
+        tarifOperatorFile = "TarifsMTS.txt";
+        break;
+    case 2:
+        tarifOperatorFile = "TarifsMegafon.txt";
+        break;
+    case 3:
+        tarifOperatorFile = "TarifsBilain.txt";
+        break;
+    }
+
+    while (Podbor < 1 || Podbor > 2) {
+        cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего "
+                "тарифа(возможна нехватка заданных данных) 2.Подбор тарифа, "
+                "полностью удовлетворяющего заданным условиям\n";
+        Podbor = GetValue();
+    }
+    switch (Podbor) {
+    case 1:
+        SposobPodbor = 1;
+        break;
+    case 2:
+        SposobPodbor = 2;
+        break;
+    }
+
+    N = 4;
+    tarifs* tarif = Input(N, tarifOperatorFile);
+    RequiredIndicators = Minut + SMS + Gig;
+    if (SposobPodbor == 1)
+        StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
+    if (SposobPodbor == 2)
+        StrokNumber = CheckTarif2(tarif, N, Minut, SMS, Gig);
+    Output(tarif, StrokNumber);
+}
