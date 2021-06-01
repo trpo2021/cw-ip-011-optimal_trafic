@@ -4,8 +4,6 @@
 #include <iostream>
 #include <libchessviz/CheckTarif1.h>
 #include <libchessviz/Input.h>
-#include <libchessviz/InputBilain.h>
-#include <libchessviz/InputMegafon.h>
 #include <libchessviz/struc.h>
 #include <list>
 using namespace std;
@@ -30,7 +28,7 @@ CTEST(test2, Output_test_Megafon)
     int N = 4;
     string tarifOperatorFile = "TarifsMegafon.txt";
     int RequiredIndicators = 900;
-    tarifs* tarif = InputMegafon(N, tarifOperatorFile);
+    tarifs* tarif = Input(N, tarifOperatorFile);
     StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
     cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
          << "\t" << tarif[StrokNumber].sms << "\t"
@@ -44,7 +42,7 @@ CTEST(test3, Output_test_Bilain)
     int N = 4;
     string tarifOperatorFile = "TarifsBilain.txt";
     int RequiredIndicators = 2000;
-    tarifs* tarif = InputBilain(N, tarifOperatorFile);
+    tarifs* tarif = Input(N, tarifOperatorFile);
     StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
     cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
          << "\t" << tarif[StrokNumber].sms << "\t"
