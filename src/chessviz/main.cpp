@@ -26,39 +26,43 @@ int main()
     string tarifOperatorFile;
 
     cout << "Введите кол-во минут:\n";
-    // cin >> Gig;
     Minut = GetValue();
     cout << "Введите кол-во гиг:\n";
-    // cin >> SMS;
     Gig = GetValue();
     cout << "Введите кол-во смс:\n";
-    // cin >> Minut;
     SMS = GetValue();
-    cout << "Выберите оператора: 1.МТС 2.Мегафон 3.Билайн\n";
-    cin >> Operator;
-    switch (Operator) {
-    case 1:
-        tarifOperatorFile = "TarifsMTS.txt";
-        break;
-    case 2:
-        tarifOperatorFile = "TarifsMegafon.txt";
-        break;
-    case 3:
-        tarifOperatorFile = "TarifsBilain.txt";
-        break;
-    }
-    cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего "
-            "тарифа(возможна нехватка заданных данных) 2.Подбор тарифа, "
-            "полностью удовлетворяющего заданным условиям\n";
-    cin >> Podbor;
-    switch (Podbor) {
-    case 1:
-        SposobPodbor = 1;
-        break;
-    case 2:
-        SposobPodbor = 2;
-        break;
-    }
+
+    do {
+        cout << "Выберите оператора: 1.МТС 2.Мегафон 3.Билайн\n";
+        cin >> Operator;
+        switch (Operator) {
+        case 1:
+            tarifOperatorFile = "TarifsMTS.txt";
+            break;
+        case 2:
+            tarifOperatorFile = "TarifsMegafon.txt";
+            break;
+        case 3:
+            tarifOperatorFile = "TarifsBilain.txt";
+            break;
+        }
+    } while (Operator != 1 || Operator != 2 || Operator != 3);
+
+    do {
+        cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего "
+                "тарифа(возможна нехватка заданных данных) 2.Подбор тарифа, "
+                "полностью удовлетворяющего заданным условиям\n";
+        cin >> Podbor;
+        switch (Podbor) {
+        case 1:
+            SposobPodbor = 1;
+            break;
+        case 2:
+            SposobPodbor = 2;
+            break;
+        }
+    } while (SposobPodbor != 1 || SposobPodbor != 2);
+
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
     RequiredIndicators = Gig + SMS + Minut;
