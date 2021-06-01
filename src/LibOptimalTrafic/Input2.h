@@ -1,7 +1,9 @@
 #pragma once
+#include <fstream>
+#include <iostream>
 using namespace std;
 
-tarifs* InputBilain(int n, string tarifOperatorFile)
+tarifs* Input2(int n, string tarifOperatorFile)
 {
     tarifs* tarif = new tarifs[n];
     string path = tarifOperatorFile;

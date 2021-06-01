@@ -1,6 +1,6 @@
-APP_NAME = chessviz
-LIB_NAME = libchessviz
-TEST_NAME = chessviz-test
+APP_NAME = OptimalTrafic
+LIB_NAME = LibOptimalTrafic
+TEST_NAME = OptimalTrafic-test
 
 CXX = g++
 CFLAGS = -Wall -Wextra -Werror

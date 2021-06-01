@@ -1,3 +1,3 @@
 #pragma once
-#include <libchessviz/struc.h>
+#include <LibOptimalTrafic/struc.h>
 void Output(tarifs* tarif, int StrokNumber);
