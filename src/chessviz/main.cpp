@@ -6,6 +6,7 @@
 #include <libchessviz/GetValue.h>
 #include <libchessviz/Input.h>
 #include <libchessviz/Output.h>
+#include <libchessviz/SwitchOperator.h>
 #include <libchessviz/struc.h>
 #include <list>
 
@@ -32,20 +33,17 @@ int main()
     cout << "Введите кол-во смс:\n";
     SMS = GetValue();
 
-    while (Operator != 1 || Operator != 2 || Operator != 3) {
-        cout << "Выберите оператора: 1.МТС 2.Мегафон 3.Билайн\n";
-        cin >> Operator;
-        switch (Operator) {
-        case 1:
-            tarifOperatorFile = "TarifsMTS.txt";
-            break;
-        case 2:
-            tarifOperatorFile = "TarifsMegafon.txt";
-            break;
-        case 3:
-            tarifOperatorFile = "TarifsBilain.txt";
-            break;
-        }
+    Operator = SwitchOperator();
+    switch (Operator) {
+    case 1:
+        tarifOperatorFile = "TarifsMTS.txt";
+        break;
+    case 2:
+        tarifOperatorFile = "TarifsMegafon.txt";
+        break;
+    case 3:
+        tarifOperatorFile = "TarifsBilain.txt";
+        break;
     }
 
     do {
