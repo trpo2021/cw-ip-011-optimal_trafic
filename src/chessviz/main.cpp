@@ -18,7 +18,7 @@ int main()
     int Gig;
     int SMS;
     int Minut;
-    int Operator;
+    int Operator = 0;
     int N;
     int RequiredIndicators;
     int StrokNumber;
@@ -33,11 +33,11 @@ int main()
     cout << "Введите кол-во смс:\n";
     SMS = GetValue();
 
-    do {
+    while (Operator != 1 || Operator != 2 || Operator != 3) {
         cout << "Введите название необходимого оператора: 1.МТС 2.Мегафон "
                 "3.Билайн \n";
         Operator = GetValue();
-    } while (Operator != 1 || Operator != 2 || Operator != 3);
+    }
 
     switch (Operator) {
     case 1:
