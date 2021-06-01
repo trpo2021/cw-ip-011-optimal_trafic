@@ -1,10 +1,10 @@
+#include <LibOptimalTrafic/CheckTarif2.h>
+#include <LibOptimalTrafic/Input2.h>
+#include <LibOptimalTrafic/struc.h>
 #include <cmath>
 #include <ctest.h>
 #include <fstream>
 #include <iostream>
-#include <LibOptimalTrafic/CheckTarif2.h>
-#include <LibOptimalTrafic/Input2.h>
-#include <LibOptimalTrafic/struc.h>
 #include <list>
 using namespace std;
 

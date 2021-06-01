@@ -1,12 +1,12 @@
-#include <cmath>
-#include <fstream>
-#include <iostream>
 #include <LibOptimalTrafic/CheckTarif1.h>
 #include <LibOptimalTrafic/CheckTarif2.h>
 #include <LibOptimalTrafic/GetValue.h>
 #include <LibOptimalTrafic/Input.h>
 #include <LibOptimalTrafic/Output.h>
 #include <LibOptimalTrafic/struc.h>
+#include <cmath>
+#include <fstream>
+#include <iostream>
 #include <list>
 
 using namespace std;
@@ -31,7 +31,6 @@ int main()
     SMS = GetValue();
     cout << "Введите кол-во гиг:\n";
     Gig = GetValue();
-   
 
     while (Operator < 1 || Operator > 3) {
         cout << "Введите название необходимого оператора: 1.МТС 2.Мегафон "
@@ -68,7 +67,7 @@ int main()
 
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
-    RequiredIndicators =  Minut + SMS + Gig;
+    RequiredIndicators = Minut + SMS + Gig;
     if (SposobPodbor == 1)
         StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
     if (SposobPodbor == 2)

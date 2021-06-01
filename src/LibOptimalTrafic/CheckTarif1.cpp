@@ -1,7 +1,7 @@
+#include <LibOptimalTrafic/struc.h>
 #include <cmath>
 #include <fstream>
 #include <iostream>
-#include <LibOptimalTrafic/struc.h>
 #include <list>
 using namespace std;
 
