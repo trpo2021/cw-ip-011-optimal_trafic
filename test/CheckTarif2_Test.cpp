@@ -3,7 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <libchessviz/CheckTarif2.h>
-#include <libchessviz/Input.h>
+#include <libchessviz/Input2.h>
 #include <libchessviz/struc.h>
 #include <list>
 using namespace std;
@@ -16,7 +16,7 @@ CTEST(test1, Output_test_MTS2)
     int SMS = 223;
     int Gig = 333;
     string tarifOperatorFile = "TarifsMTS.txt";
-    tarifs* tarif = Input(N, tarifOperatorFile);
+    tarifs* tarif = Input2(N, tarifOperatorFile);
     StrokNumber = CheckTarif2(tarif, N, Minut, SMS, Gig);
     cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
          << "\t" << tarif[StrokNumber].sms << "\t"
@@ -32,7 +32,7 @@ CTEST(test2, Output_test_Megafon2)
     int SMS = 230;
     int Gig = 320;
     string tarifOperatorFile = "TarifsMegafon.txt";
-    tarifs* tarif = Input(N, tarifOperatorFile);
+    tarifs* tarif = Input2(N, tarifOperatorFile);
     StrokNumber = CheckTarif2(tarif, N, Minut, SMS, Gig);
     cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
          << "\t" << tarif[StrokNumber].sms << "\t"
@@ -48,7 +48,7 @@ CTEST(test3, Output_test_Bilain2)
     int SMS = 450;
     int Gig = 450;
     string tarifOperatorFile = "TarifsBilain.txt";
-    tarifs* tarif = Input(N, tarifOperatorFile);
+    tarifs* tarif = Input2(N, tarifOperatorFile);
     StrokNumber = CheckTarif2(tarif, N, Minut, SMS, Gig);
     cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
          << "\t" << tarif[StrokNumber].sms << "\t"
