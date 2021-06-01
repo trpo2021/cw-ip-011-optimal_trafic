@@ -33,7 +33,7 @@ int main()
     cout << "Введите кол-во смс:\n";
     SMS = GetValue();
 
-    while (Operator != 1 || Operator != 2 || Operator != 3) {
+    while (Operator < 0 || Operator > 4) {
         cout << "Введите название необходимого оператора: 1.МТС 2.Мегафон "
                 "3.Билайн \n";
         Operator = GetValue();
