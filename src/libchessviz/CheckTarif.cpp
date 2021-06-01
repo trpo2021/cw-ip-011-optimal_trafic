@@ -1,10 +1,9 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
-#include <list>
 #include <libchessviz/struc.h>
+#include <list>
 using namespace std;
-
 
 int CheckTarif(tarifs* tarif, int N, int RequiredIndicators)
 {

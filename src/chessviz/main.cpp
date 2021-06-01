@@ -1,17 +1,14 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
-#include <list>
-#include <libchessviz/struc.h>
-#include <libchessviz/Input.h>
 #include <libchessviz/CheckTarif.h>
-#include <libchessviz/Output.h>
 #include <libchessviz/GetValue.h>
+#include <libchessviz/Input.h>
+#include <libchessviz/Output.h>
+#include <libchessviz/struc.h>
+#include <list>
 
 using namespace std;
-
-
-
 
 // void Output(tarifs* tarif, int StrokNumber)
 //{
@@ -52,14 +49,14 @@ int main()
     string tarifOperatorFile;
 
     cout << "Введите кол-во минут:\n";
-    //cin >> Gig;
-    Minut=GetValue();
+    // cin >> Gig;
+    Minut = GetValue();
     cout << "Введите кол-во гиг:\n";
-    //cin >> SMS;
-    Gig=GetValue();
+    // cin >> SMS;
+    Gig = GetValue();
     cout << "Введите кол-во смс:\n";
-    //cin >> Minut;
-    SMS=GetValue();
+    // cin >> Minut;
+    SMS = GetValue();
     cout << "Выберите оператора: 1.МТС 2.Мегафон 3.Билайн\n";
     cin >> Operator;
     switch (Operator) {
