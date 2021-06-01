@@ -10,32 +10,6 @@
 
 using namespace std;
 
-// void Output(tarifs* tarif, int StrokNumber)
-//{
-//
-//        cout << tarif[StrokNumber].name << "\t" <<
-//        tarif[StrokNumber].minutes<< "\t" << tarif[StrokNumber].sms << "\t"<<
-//        tarif[StrokNumber].gigabytes<< endl;
-//
-//}
-//
-// int CheckTarif(tarifs* tarif, int N, int RequiredIndicators)
-//{
-//    int Difference, StrokSum, StrokNumber;
-//    for (int i = 0; i < N; i++) {
-//            StrokSum = tarif[i].minutes + tarif[i].sms + tarif[i].gigabytes;
-//        if (i == 0) {
-//            StrokNumber = 0;
-//             Difference = abs(RequiredIndicators - StrokSum);
-//        }
-//        if (Difference > abs(RequiredIndicators - StrokSum)) {
-//            Difference = abs(RequiredIndicators - StrokSum);
-//            StrokNumber = i;
-//        }
-//    }
-//    return StrokNumber;
-//}
-
 int main()
 {
     setlocale(LC_ALL, "Rus"); // Подключение русского языка
