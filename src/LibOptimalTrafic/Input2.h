@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 tarifs* Input2(int n, string tarifOperatorFile)
