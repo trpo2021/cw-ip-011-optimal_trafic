@@ -22,7 +22,7 @@ int main()
     int N;
     int RequiredIndicators;
     int StrokNumber;
-    int Podbor;
+    int Podbor = 0;
     int SposobPodbor;
     string tarifOperatorFile;
 
@@ -51,20 +51,20 @@ int main()
         break;
     }
 
-    do {
+    while (Podbor < 1 || Podbor > 2) {
         cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего "
                 "тарифа(возможна нехватка заданных данных) 2.Подбор тарифа, "
                 "полностью удовлетворяющего заданным условиям\n";
-        cin >> Podbor;
-        switch (Podbor) {
-        case 1:
-            SposobPodbor = 1;
-            break;
-        case 2:
-            SposobPodbor = 2;
-            break;
-        }
-    } while (SposobPodbor == 1 || SposobPodbor == 2);
+        Podbor = GetValue();
+    }
+    switch (Podbor) {
+    case 1:
+        SposobPodbor = 1;
+        break;
+    case 2:
+        SposobPodbor = 2;
+        break;
+    }
 
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
