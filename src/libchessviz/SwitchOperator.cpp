@@ -19,6 +19,8 @@ int SwitchOperator()
         } else if (a == 1 || a == 2 || a == 3) {
             cin.ignore(2000, '\n'); // удаляем лишние значения
             return a;
+        } else {
+            int SwitchOperator();
         }
     }
 }
