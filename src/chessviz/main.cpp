@@ -46,7 +46,9 @@ int main()
         tarifOperatorFile = "TarifsBilain.txt";
         break;
     }
-    cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего тарифа(возможна нехватка заданных данных) 2.Подбор тарифа, полностью удовлетворяющего заданным условиям\n";
+    cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего "
+            "тарифа(возможна нехватка заданных данных) 2.Подбор тарифа, "
+            "полностью удовлетворяющего заданным условиям\n";
     cin >> Podbor;
     switch (Podbor) {
     case 1:
@@ -59,7 +61,9 @@ int main()
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
     RequiredIndicators = Gig + SMS + Minut;
-    if(SposobPodbor=1) StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
-    if(SposobPodbor=2) StrokNumber = CheckTarif2(tarif, N, RequiredIndicators);
+    if (SposobPodbor = 1)
+        StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
+    if (SposobPodbor = 2)
+        StrokNumber = CheckTarif2(tarif, N, RequiredIndicators);
     Output(tarif, StrokNumber);
 }
