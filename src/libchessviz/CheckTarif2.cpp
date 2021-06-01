@@ -5,7 +5,7 @@
 #include <list>
 using namespace std;
 
-int CheckTarif2(tarifs* tarif, int N, int Gig, int SMS, int Minut)
+int CheckTarif2(tarifs* tarif, int N, int Minut, int SMS, int Gig)
 {
     int Difference = 9999, StrokSum, StrokNumber, RequiredIndicators;
     RequiredIndicators = Gig + SMS + Minut;

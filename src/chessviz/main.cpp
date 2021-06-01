@@ -27,10 +27,11 @@ int main()
 
     cout << "Введите кол-во минут:\n";
     Minut = GetValue();
-    cout << "Введите кол-во гиг:\n";
-    Gig = GetValue();
     cout << "Введите кол-во смс:\n";
     SMS = GetValue();
+    cout << "Введите кол-во гиг:\n";
+    Gig = GetValue();
+   
 
     while (Operator < 1 || Operator > 3) {
         cout << "Введите название необходимого оператора: 1.МТС 2.Мегафон "
@@ -67,10 +68,10 @@ int main()
 
     N = 4;
     tarifs* tarif = Input(N, tarifOperatorFile);
-    RequiredIndicators = Gig + SMS + Minut;
+    RequiredIndicators =  Minut + SMS + Gig;
     if (SposobPodbor == 1)
         StrokNumber = CheckTarif1(tarif, N, RequiredIndicators);
     if (SposobPodbor == 2)
-        StrokNumber = CheckTarif2(tarif, N, Gig, SMS, Minut);
+        StrokNumber = CheckTarif2(tarif, N, Minut, SMS, Gig);
     Output(tarif, StrokNumber);
 }
