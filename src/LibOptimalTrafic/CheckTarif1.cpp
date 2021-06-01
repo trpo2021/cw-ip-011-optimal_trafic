@@ -1,7 +1,7 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
-#include <libchessviz/struc.h>
+#include <LibOptimalTrafic/struc.h>
 #include <list>
 using namespace std;
 

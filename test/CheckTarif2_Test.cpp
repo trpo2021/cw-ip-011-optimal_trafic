@@ -2,9 +2,9 @@
 #include <ctest.h>
 #include <fstream>
 #include <iostream>
-#include <libchessviz/CheckTarif2.h>
-#include <libchessviz/Input2.h>
-#include <libchessviz/struc.h>
+#include <LibOptimalTrafic/CheckTarif2.h>
+#include <LibOptimalTrafic/Input2.h>
+#include <LibOptimalTrafic/struc.h>
 #include <list>
 using namespace std;
 

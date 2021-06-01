@@ -1,12 +1,12 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
-#include <libchessviz/CheckTarif1.h>
-#include <libchessviz/CheckTarif2.h>
-#include <libchessviz/GetValue.h>
-#include <libchessviz/Input.h>
-#include <libchessviz/Output.h>
-#include <libchessviz/struc.h>
+#include <LibOptimalTrafic/CheckTarif1.h>
+#include <LibOptimalTrafic/CheckTarif2.h>
+#include <LibOptimalTrafic/GetValue.h>
+#include <LibOptimalTrafic/Input.h>
+#include <LibOptimalTrafic/Output.h>
+#include <LibOptimalTrafic/struc.h>
 #include <list>
 
 using namespace std;
