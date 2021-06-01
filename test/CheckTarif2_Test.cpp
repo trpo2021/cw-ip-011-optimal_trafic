@@ -56,5 +56,5 @@ CTEST(test3, Output_test_Bilain2)
     cout << tarif[StrokNumber].name << "\t" << tarif[StrokNumber].minutes
          << "\t" << tarif[StrokNumber].sms << "\t"
          << tarif[StrokNumber].gigabytes << endl;
-    ASSERT_EQUAL(3, StrokNumber);
+    ASSERT_EQUAL(2, StrokNumber);
 }
