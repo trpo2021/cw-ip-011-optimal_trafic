@@ -3,9 +3,9 @@
 #include <fstream>
 #include <iostream>
 #include <libchessviz/CheckTarif1.h>
+#include <libchessviz/Input.h>
 #include <libchessviz/InputBilain.h>
 #include <libchessviz/InputMegafon.h>
-#include <libchessviz/Input.h>
 #include <libchessviz/struc.h>
 #include <list>
 using namespace std;
@@ -51,6 +51,3 @@ CTEST(test3, Output_test_Bilain)
          << tarif[StrokNumber].gigabytes << endl;
     ASSERT_EQUAL(3, StrokNumber);
 }
-
-
-
