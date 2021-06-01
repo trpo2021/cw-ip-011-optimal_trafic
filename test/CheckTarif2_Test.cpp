@@ -14,7 +14,7 @@ CTEST(test1, Output_test_MTS2)
     int N = 4;
     int Minut = 222;
     int SMS = 223;
-    int Gig = 333;
+    int Gig = 222;
     string tarifOperatorFile = "TarifsMTS.txt";
     tarifs* tarif = Input2(N, tarifOperatorFile);
     StrokNumber = CheckTarif2(tarif, N, Minut, SMS, Gig);

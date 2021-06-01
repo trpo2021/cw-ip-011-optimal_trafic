@@ -11,8 +11,8 @@ int CheckTarif2(tarifs* tarif, int N, int Minut, int SMS, int Gig)
     RequiredIndicators = Gig + SMS + Minut;
     for (int i = 0; i < N; i++) {
         StrokSum = tarif[i].minutes + tarif[i].sms + tarif[i].gigabytes;
-        if (tarif[i].gigabytes > Gig && tarif[i].sms > SMS
-            && tarif[i].minutes > Minut) {
+        if (tarif[i].gigabytes >= Gig && tarif[i].sms >= SMS
+            && tarif[i].minutes >= Minut) {
             if (Difference > StrokSum - RequiredIndicators) {
                 Difference = StrokSum - RequiredIndicators;
                 StrokNumber = i;
