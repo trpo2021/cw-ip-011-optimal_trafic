@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Rus"); 
+    setlocale(LC_ALL, "Rus");
     int Gig;
     int SMS;
     int Minut;
@@ -32,7 +32,7 @@ int main()
     cout << "Введите кол-во смс:\n";
     SMS = GetValue();
 
-    do {
+    while (Operator != 1 || Operator != 2 || Operator != 3) {
         cout << "Выберите оператора: 1.МТС 2.Мегафон 3.Билайн\n";
         cin >> Operator;
         switch (Operator) {
@@ -46,7 +46,7 @@ int main()
             tarifOperatorFile = "TarifsBilain.txt";
             break;
         }
-    } while (Operator == 1 || Operator == 2 || Operator == 3);
+    }
 
     do {
         cout << "Выберите способ подбора тарифа: 1.Подбор наиболее ближайшего "
