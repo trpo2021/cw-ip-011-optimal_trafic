@@ -35,9 +35,9 @@ int main()
 
     do {
         cout << "Введите название необходимого оператора: 1.МТС 2.Мегафон "
-                "3.Билайн";
+                "3.Билайн \n";
         Operator = GetValue();
-    } while (Operator == 1 || Operator == 2 || Operator == 3);
+    } while (Operator != 1 || Operator != 2 || Operator != 3);
 
     switch (Operator) {
     case 1:
