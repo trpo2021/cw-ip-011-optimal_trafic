@@ -6,7 +6,6 @@
 #include <libchessviz/GetValue.h>
 #include <libchessviz/Input.h>
 #include <libchessviz/Output.h>
-#include <libchessviz/SwitchOperator.h>
 #include <libchessviz/struc.h>
 #include <list>
 
