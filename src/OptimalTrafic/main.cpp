@@ -73,4 +73,4 @@ int main()
     if (SposobPodbor == 2)
         StrokNumber = CheckTarif2(tarif, N, Minut, SMS, Gig);
     Output(tarif, StrokNumber);
-};
+}
