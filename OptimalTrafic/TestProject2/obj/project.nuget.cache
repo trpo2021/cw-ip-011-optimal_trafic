@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "RMrgbInWDRUwxMkvapneg74pgHSGzqltZxCIa1YNU8n+Jf0joJXok6zRQZ+FQQUK26cGmpfcDftc1+Xc3R68iw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Рома\\source\\repos\\trpo2021\\cw-ip-011-optimal_trafic\\OptimalTrafic\\TestProject2\\TestProject2.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Невозможно прочитать сведения о проекте для \"TestProject2\": Идентификатор платформы \"\" недопустим."
+    }
+  ]
+}

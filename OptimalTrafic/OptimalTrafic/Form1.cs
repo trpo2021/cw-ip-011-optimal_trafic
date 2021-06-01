@@ -41,13 +41,13 @@ namespace OptimalTrafic
 
         }
 
-        int RequiredIndicators;
+        public int RequiredIndicators;
         int StrokNumber;
         int StrokSum;
         int Difference;
 
 
-        private void buttonSendSearchTarif_Click(object sender, EventArgs e)
+        public void buttonSendSearchTarif_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             if (string.IsNullOrEmpty(textBoxGB.Text) || string.IsNullOrWhiteSpace(textBoxGB.Text) ||

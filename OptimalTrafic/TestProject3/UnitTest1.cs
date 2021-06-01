@@ -17,6 +17,7 @@ namespace TestProject3
         public void TestMethod1()
         {
             int Sum;
+            int Sum2 = 666;
 
             Form1 form1 = new Form1();
             form1.Show();
@@ -25,7 +26,7 @@ namespace TestProject3
             form1.textBoxSMS.Text = "333";
             form1.comboBoxOperator.SelectedIndex = 0;
             Sum = Convert.ToInt32(form1.textBoxGB.Text) + Convert.ToInt32(form1.textBoxMinute.Text) + Convert.ToInt32(form1.textBoxSMS.Text);
-            Assert.AreEqual(Sum, RequiredIndicators);
+            Assert.AreEqual(Sum, Sum2);
             //Assert.IsTrue(form1.buttonSendSearchTarif.Enabled==true);
             //Assert.IsTrue(form1.buttonSendSearchTarif.Enabled=true);
             form1.Close();
