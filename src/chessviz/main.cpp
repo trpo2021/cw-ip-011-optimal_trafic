@@ -33,7 +33,12 @@ int main()
     cout << "Введите кол-во смс:\n";
     SMS = GetValue();
 
-    Operator = SwitchOperator();
+    do {
+        cout << "Введите название необходимого оператора: 1.МТС 2.Мегафон "
+                "3.Билайн";
+        Operator = GetValue();
+    } while (Operator == 1 || Operator == 2 || Operator == 3);
+
     switch (Operator) {
     case 1:
         tarifOperatorFile = "TarifsMTS.txt";

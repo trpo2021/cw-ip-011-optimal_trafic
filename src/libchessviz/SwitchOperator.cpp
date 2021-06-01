@@ -3,6 +3,8 @@ using namespace std;
 
 int SwitchOperator()
 {
+
+    
     while (true) // цикл продолжается до тех пор, пока пользователь не введет
                  // корректное значение
     {
